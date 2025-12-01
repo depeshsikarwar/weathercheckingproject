@@ -1,0 +1,96 @@
+body{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin-top: 150px;
+}
+main {
+    position: relative;
+     height: 60vh;
+    width: 50vw;
+    font-style: italic;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+
+   
+}
+img{
+    position: absolute;
+    opacity: 0.5;
+    height: 51vh;
+}
+section{
+    position: relative;
+}
+input,button{
+    cursor:pointer;
+    height: 50px;
+    width: 300px;
+}
+button{
+    margin-top: 3px;
+    width: 200px;
+}
+input:hover{
+   
+    font-size: medium;
+    border-color: brown;
+}
+button:hover{
+    background-color: black;
+    color: white;
+    font-size: medium;
+    border: none;
+}
+div{
+    /* background-color: aqua; */
+    /* border: 1px solid black; */
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+    main {
+        width: 90vw;
+        height: 50vh;
+        font-size: medium;
+    }
+
+    img {
+        height: 45vh;
+    }
+
+    input, button {
+        width: 80vw;
+    }
+
+    button {
+        width: 60vw;
+    }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+    main {
+        width: 70vw;
+        height: 55vh;
+        font-size: large;
+    }
+
+    img {
+        height: 60vh;
+    }
+
+    input, button {
+        width: 60vw;
+    }
+
+    button {
+        width: 40vw;
+    }
+}
