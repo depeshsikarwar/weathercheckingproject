@@ -3,13 +3,14 @@ function weatherforcast(){
         let value=input.value;
         if(value==""){
             alert("Please enter city")
+            return;
         }
         
         console.log(value);
         const API_KEY="cc78f577884fde13d63d61e54989e331";
         async function fetchdata() {
         try{ 
-        const url=`https:api.openweathermap.org/data/2.5/weather?q=${value}&appid=${API_KEY}&units=metric`;
+        const url=`https://api.openweathermap.org/data/2.5/weather?q=${value}&appid=${API_KEY}&units=metric`;
         console.log(url);
         let take=await fetch(url,{});
         let convert=await take.json();
@@ -20,6 +21,9 @@ function weatherforcast(){
     catch{
         console.log("error");
         console.log("data can't be fetch");
+         let main = document.querySelector("main");
+         main.innerHTML=`<h1>city not found</h1>`;
+        
         }
    
 }
@@ -32,7 +36,7 @@ function display(data){
     main.innerHTML =
         
    `
-<img src="/istockphoto-477110708-612x612.jpg" alt="">
+<img src="img.jpg" alt="">
 <section>
    <h1>Temperature:${data.main.temp}</h1>
   <h1>Visibility:${data.visibility}</h1>
